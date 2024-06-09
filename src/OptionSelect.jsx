@@ -6,7 +6,8 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
 
-function OptionSelect({tenure , setTenure , handleChange}) {
+function OptionSelect({tenure , setTenure }) {
+
   return (
    <>
      <div className="content">
@@ -17,8 +18,8 @@ function OptionSelect({tenure , setTenure , handleChange}) {
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
                   value={tenure}
-                  label="Age"
-                    onChange={handleChange}
+                  label="Tenure"
+                  onChange={(e)=>{setTenure(e.target.value)}}
                 >
                   <MenuItem value={5}>5 Years</MenuItem>
                   <MenuItem value={10}>10 Years</MenuItem>

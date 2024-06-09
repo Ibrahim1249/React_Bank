@@ -2,7 +2,7 @@
 import { CChart } from "@coreui/react-chartjs";
 
 
-function Chart() {
+function Chart({homeValue , monthlyPayment , loanAmount , tenure}) {
   return (
    <>
      <CChart
@@ -11,8 +11,8 @@ function Chart() {
               labels: ["Principle", "Interest"],
               datasets: [
                 {
-                  backgroundColor: ["#41B883", "#E46651"],
-                  data: [1000, 250],
+                  backgroundColor: ["rgba(13, 13, 83, 0.938)", "rgba(22, 112, 134, 0.938)"],
+                  data: [homeValue, monthlyPayment * tenure * 12 - loanAmount],
                 },
               ],
             }}
